@@ -88,3 +88,10 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.1
+    functionName: DestroyObject
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: fdaf3b99450d7e34a9bcb0ff5e1f46b6, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
