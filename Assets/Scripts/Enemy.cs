@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        GameSounds.enemyDeath = true;
     }
     // Update is called once per frame
     void Update()

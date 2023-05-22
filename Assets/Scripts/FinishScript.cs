@@ -11,7 +11,7 @@ public class FinishScript : MonoBehaviour
 
     public GameObject chrono;
 
-    void OnTriggerEnter(Collider Player)
+    void OnTriggerEnter2D(Collider2D Player)
     {
         Debug.Log("Finito !");
         Timer.StopChrono();
