@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsCrounching", isCrouching);
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;

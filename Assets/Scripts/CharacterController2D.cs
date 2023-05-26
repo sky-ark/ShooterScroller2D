@@ -21,8 +21,12 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private bool _grounded;
     const float _groundedRadius = .2f; // Rayon pour déterminer si le joueur est grounded
     private bool _facingRight = true;
+    public bool Grounded
+    {
+        get => _grounded;
+        set => _grounded = value;
+    }
     
-
     [Header("Events")]
     [Space]
 
@@ -53,18 +57,21 @@ public class CharacterController2D : MonoBehaviour
     void FixedUpdate()
     {
         bool wasGrounded = _grounded;
-        _grounded = false;
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(_groundCheck.position, _groundedRadius, _whatIsGround);
-        for (int i = 0; i < colliders.Length; i++)
+        // _grounded = false;
+        
+        if(_grounded) OnLandEvent.Invoke();
+        
+        // Collider2D[] colliders = Physics2D.OverlapCircleAll(_groundCheck.position, _groundedRadius, _whatIsGround);
+        /* for (int i = 0; i < colliders.Length; i++)
         {
             if (colliders[i].gameObject != gameObject)
             {
                 _grounded = true; 
                 if(!wasGrounded) OnLandEvent.Invoke();
             }
-        }
-        float moveInput = Input.GetAxisRaw("Horizontal");
- 
+        } */
+        
+        // float moveInput = Input.GetAxisRaw("Horizontal");
     }
 
     public void Move(float move, bool crouch, bool jump)
