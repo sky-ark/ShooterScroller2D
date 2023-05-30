@@ -66004,6 +66004,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  stats: {fileID: 2094078516}
+  damage: 20
   deathEffect: {fileID: 472247266398656994, guid: d3fca28811e1625459430f467dd276a5, type: 3}
 --- !u!61 &2013672075
 BoxCollider2D:
@@ -66154,11 +66156,12 @@ GameObject:
   - component: {fileID: 2094078507}
   - component: {fileID: 2094078512}
   - component: {fileID: 2094078513}
+  - component: {fileID: 2094078516}
   - component: {fileID: 2094078514}
   - component: {fileID: 2094078515}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66382,3 +66385,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2094078516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094078506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 856b1be8ada5aff44a2041f1cce0c880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
