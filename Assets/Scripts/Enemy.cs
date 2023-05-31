@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public PlayerStats stats;
     public int damage = 20;
     public GameObject deathEffect;
+    public float force = 5f;
 
     public void TakeDamage(int damage)
     {
@@ -24,15 +25,5 @@ public class Enemy : MonoBehaviour
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
         GameSounds.enemyDeath = true;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("enemy hit");
-            stats.DamagePlayer(damage);
-        }
     }
 }

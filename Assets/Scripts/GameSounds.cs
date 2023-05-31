@@ -7,7 +7,9 @@ public class GameSounds : MonoBehaviour
 {
     public static bool shooting;
     public static bool enemyDeath;
+    public static bool hurt;
     public AudioClip shootingClip;
+    public AudioClip hurtClip;
 
     public AudioClip enemyDeathClip;
     // Update is called once per frame
@@ -22,11 +24,19 @@ public class GameSounds : MonoBehaviour
             shooting = false;
         }
 
+        if (hurt) 
+        {
+            GetComponent<AudioSource>().clip = hurtClip;
+            GetComponent<AudioSource>().Play();
+        hurt = false;
+        }
         if (enemyDeath)
         {
             GetComponent<AudioSource>().clip = enemyDeathClip;
             GetComponent<AudioSource>().Play();
             enemyDeath = false;
         }
+        
+        
     }
 }

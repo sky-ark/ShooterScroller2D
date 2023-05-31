@@ -1,12 +1,9 @@
 fileFormatVersion: 2
-guid: 7af9e28a7443bb3429a402d482920d8d
+guid: 75f41c579d29fbf42a3c387042311771
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - shootingClip: {instanceID: 0}
-  - hurtClip: {instanceID: 0}
-  - enemyDeathClip: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
